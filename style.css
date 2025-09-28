@@ -1,0 +1,248 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+section{
+    height: 100dvh;
+    width: 100vw;
+    background-color: red;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.container{
+    width: 500px;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+}
+.header{
+    width: 80%;
+    background-color: gainsboro;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 3px;
+    margin-top: 30px;
+}
+.header button{
+    width: 50%;
+    font-weight: 500;
+    border: none;
+}
+.header button:hover{
+    background-color: gray;
+    color: white;
+}
+.header #link{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.header #message{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.header hr{
+    height: 70%;
+    width: 1px;
+    background-color: black;
+    outline: none;
+    border: none;
+    align-self: center;
+}
+.active{
+    background-color: black;
+    color: white;
+}
+.deactive{
+    background-color: ghostwhite;
+    color: black;
+}
+.container .links{
+    background-color: white;
+    height: 82%;
+    width: 82%;
+    position: absolute;
+    flex: none;
+    margin-top: 100px;
+    z-index: 1;
+    flex-direction:row;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    border: none;
+}
+.container .message{
+    background-color: white;
+    height: 80%;
+    position: absolute;
+    margin-top: 100px;
+    flex: none;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    gap: 10px;
+}
+.links .box{
+    background-color: black;
+    height: 130px;
+    width: 120px;
+    border-radius: 20px;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: 0.5s;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.links .box h1{
+    color: yellow;
+    font-size: 20px;
+}
+.links .box::after{
+    background:linear-gradient(180deg, transparent, black);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+}
+.links .box:nth-child(1){
+    background: url("images/ig.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.links .box:nth-child(2){
+    background: url("images/fb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.links .box:nth-child(3){
+    background: url("images/x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.links .box:nth-child(4){
+    background: url("images/gt.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.links .box:nth-child(5){
+    background: url("images/un.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.links .box:nth-child(6){
+    background: url("images/un.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.links .box .profile{
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    gap: 3px;
+    height: fit-content;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.profile h4{
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+}
+.profile p{
+    font-size: 10px;
+    color: ghostwhite;
+}
+.profile a{
+    width:90%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.726);
+    color: black;
+    height: 24px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.box:hover{
+    scale:1.1;
+}
+.profile a:hover{
+    background-color: white;
+    color: black;
+}
+.h4{
+    position: absolute;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+    color: gray;
+    margin-top: 5px;
+    z-index: 10;
+    bottom: 20px;
+}
+.message form{
+    width: 80%;
+    height: 100%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.message form input{
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid gray;
+    background-color: white;
+    box-shadow: 1px 2px 5px 2px gainsboro;
+    border-radius: 10px;
+}
+.message form input:focus{
+    outline: none;
+}
+#sendBtn{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+#textarea{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 1px 2px 5px 2px gainsboro;
+    padding: 10px;
+    border-radius: 10px;
+}
+textarea:focus{
+    outline: none;
+}
